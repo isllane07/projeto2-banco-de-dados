@@ -515,7 +515,7 @@ INSERT INTO socio_economico (Nome, Idade, Gênero, Escolaridade, Ocupação, Ren
 	('Davi Luiz Gomes', '35', 'Masculino', 'Pós-graduação', 'Desempregado', '3 a 5 SM', 'Viúvo', 'MA', 'Barbosa'),
 	('Alice Peixoto', '55', 'Feminino', 'Superior Completo', 'CLT', '1 a 2 SM', 'Viúvo', 'MA', 'das Neves da Mata');
     
-use projeto2
+
     
 select * from socio_economico;
     
@@ -571,7 +571,7 @@ FROM socio_economico
 WHERE Escolaridade = 'Médio Completo'
 GROUP BY Ocupação
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 --  Mais solteiros ou casados entre os desempregados
 
@@ -596,42 +596,42 @@ SELECT Escolaridade, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Escolaridade
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 -- Ocupação mais comum
 SELECT Ocupação, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Ocupação
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 -- Estado mais representado
 SELECT Estado, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Estado
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 -- Gênero mais frequente
 SELECT Gênero, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Gênero
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 2;
 
 -- Faixa de renda mais comum
 SELECT Renda_Mensal, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Renda_Mensal
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 -- Estado civil mais comum
 SELECT Estado_Civil, COUNT(*) AS Total
 FROM socio_economico
 GROUP BY Estado_Civil
 ORDER BY Total DESC
-LIMIT 1;
+LIMIT 3;
 
 
 
